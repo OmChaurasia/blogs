@@ -1,0 +1,13 @@
+.jumbodron{
+    height: 30vh;
+    width: 100vw;
+    background: #dde4e6;
+    display: flex;
+    color: rgba(15, 24, 49, 0.8);
+    align-items: center;
+}
+@media only screen and (max-width:650px) {
+    .jumbodron{
+        height: 50vh;
+    }
+}

@@ -1,0 +1,61 @@
+
+.aboutpart{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+}
+.aboutpart h3{
+    font-size: 50px;
+    margin-bottom: 26px;
+}
+.aboutpart .socialacount{
+    margin: auto;
+    width: calc(10vw + 250px)
+}
+.aboutpart .aclist{
+    margin: 30px;
+    
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top: 2px solid rgba(0,0,0,0.3);
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    
+}
+.aboutpart .aclist h6{
+    padding-left: 5px;
+    font-size: 20px;
+}
+@media only screen and (max-width:1250px){
+    .aboutpart .aclist h6{
+        display: none;
+    }
+}
+.aboutpart .aclist .imgborder{
+    height: 55px;
+    width: 55px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.aboutpart .aclist img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.aboutpart .aclist a{
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    color: #000;
+}

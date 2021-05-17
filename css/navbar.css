@@ -1,0 +1,124 @@
+
+        .navbar {
+            background-color: #36b6d8;
+            height: 50px;
+            width: 100vw;
+
+        }
+
+        .navbar h3 {
+            position: absolute;
+            left: 50px;
+            font-size: 34px;
+            line-height: 50px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .navbar ul li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 120px;
+        }
+
+        .navbar ul li a {
+            line-height: 50px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        .navbar ul li a:hover {
+            color: #fff;
+            background: #3e5580;
+            border-radius: 10px;
+        }
+
+        .navbar label {
+            display: none;
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        @media only screen and (max-width:950px) {
+            .navbar label {
+                position: absolute;
+                top: 0;
+                font-size: 2.3em;
+                display: block;
+                width: 50px;
+                Line-height: 50px;
+                text-align: center;
+                cursor: pointer;
+                transition: .5s ease;
+            }
+
+            .sidenav{
+                position: absolute;
+                top: 50px;
+                height: 100vh;
+                width: 0px;
+                background: #4746ab;
+                transition: width 0.3s;
+                overflow: hidden;
+            }
+            #toggle:checked~.sidenav{
+                width: 200px;
+            }
+            .navbar ul{
+                flex-direction: column;
+                left: 0;
+            }
+            .navbar ul li {
+                height: 50px;
+                width: 200px;
+                border-bottom: 1px solid rgba(255,255,255,0.4);
+            }
+            .navbar ul li a{
+                height: 50px;
+                width: 200px;
+            }
+            #label{
+                height: 30px;
+                width: 30px;
+                display: grid;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                place-items: center;
+                transition: all 0.3s;
+            }
+            .firstl ,.secondl, .thirdl{
+                background: #000;
+                height: 3px;
+                width: 34px;
+                transition: all 0.3s;
+            }
+
+            #toggle:checked~ #label >.secondl{
+                display: none;
+                transition: all 0.3s;
+            }
+            
+            #toggle:checked~ #label >.firstl{
+                transform: rotate(45deg) translateY(10px);
+                transition: all 0.3s;
+            }
+            
+            #toggle:checked~ #label >.thirdl{
+                transform: rotate(-45deg) translateY(-10px);
+                transition: all 0.3s;
+            }
+            
+        }
