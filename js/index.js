@@ -94,6 +94,8 @@ function searchdata(val){
 let geturl = window.location.search;
 
 if (geturl!=""){
+    document.getElementById("jumbo").style.display="None";
+    document.getElementById("filter").style.display="None";
     geturl=geturl.slice(1);
     geturl=geturl.replace(/=/g,`":"`)
     geturl=geturl.replace(/&/g,`","`)
