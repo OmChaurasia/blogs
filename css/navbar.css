@@ -109,7 +109,7 @@
                 display: none;
             }
             .navbar #logo{
-                transform: translate(60px, 2px);
+                transform: translate(48px, 2px);
             }
             .navbar form{
                 left:115px;
@@ -130,6 +130,7 @@
                 flex-direction: column;
                 left: 0;
             }
+            
             .navbar ul li {
                 height: 50px;
                 width: 200px;
@@ -177,6 +178,6 @@
                 display:  none;
             }
             .navbar form{
-                left: 115px;
+                left: 100px;
             }
         }
