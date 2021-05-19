@@ -5,10 +5,26 @@
             width: 100vw;
 
         }
-
+        .navbar #logo{
+            height: 45px;
+            width: 45px;
+            transform: translate(4px, 2px);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        .line{
+            display: flex;
+        }
+        .navbar #logo img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+        }
         .navbar h3 {
             position: absolute;
-            left: 50px;
+            left: 60px;
             font-size: 34px;
             line-height: 50px;
         }
@@ -89,7 +105,15 @@
                 cursor: pointer;
                 transition: .5s ease;
             }
-
+            .navbar h3{
+                display: none;
+            }
+            .navbar #logo{
+                transform: translate(60px, 2px);
+            }
+            .navbar form{
+                left:115px;
+            }
             .sidenav{
                 position: absolute;
                 top: 50px;
@@ -153,6 +177,6 @@
                 display:  none;
             }
             .navbar form{
-                left: 50px;
+                left: 115px;
             }
         }
