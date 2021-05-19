@@ -1,3 +1,13 @@
+.filter{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+#categ{
+    width: 160px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.8);
+}
 .cards_container{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -84,11 +94,13 @@
     background: transparent;
     border: 1px solid #633a3a;
     border-radius: 5px;
+    
 }
 .boxs .boxbottom button:hover{
     border: 1px solid rgb(10, 4, 4);
     background: rgb(102, 54, 54);
     color: #fff;
+    
 }
 .boxs .boxbottom .timestamp{
     position: absolute;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website Css</title>
+    <title>Om Chaurasia Blogs</title>
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -24,6 +24,10 @@
             <div class="thirdl"></div>
         </label>
         <h3>Om Chaurasia</h3>
+        <form action="index.html">
+            <input type="text" name="search" id="search" required placeholder="Search blogs">
+            <input type="submit" value="Search" id="srh">
+        </form>
         <div class="sidenav">
             <ul class="navlist" id="navul">
                 <li><a href="index.html">Home</a></li>
@@ -50,8 +54,18 @@
         </div>
     </div>
 
+    <div class="filter">Categories : <select name="categ" id="categ" onchange="GetSelectedTextValue(this)">
+        <option value="All">All</option>
+        <option value="IT Project" onclick="itpro()">IT Project</option>
+        <option value="Short Code">Short Code</option>
+        <option value="Other Educational">Other Educational</option>
+        <option value="Computer Hardware">Computer Hardware</option>
+        <option value="Stories">Stories</option>
+        <option value="Entertainment">Entertainment</option>
+    </select></div>
+
     <!-- cards cantainer code will be here -->
-    <div class="container_fluid cards_container">
+    <div class="container_fluid cards_container" id="blogs">
         <div class="boxs box1">
             <div class="boximg">
                <img src="https://source.unsplash.com/random" alt="">
@@ -147,5 +161,6 @@
         Created by - Om Chaurasia
     </div>
 </body>
-
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
 </html>
