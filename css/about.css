@@ -58,4 +58,11 @@
     position: absolute;
     right: 10px;
     color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    padding: 5px;
+    border-radius: 5px;
+}
+.aboutpart .aclist a:hover{
+    background: skyblue;
+    color: #fff;
 }
