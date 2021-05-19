@@ -40,13 +40,13 @@
     <div class="form container">
         <h3>Contact Us</h3>
         <br>
-        <form action="">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="number" placeholder="Mobile Number">
+        <form action="" method="POST" name="google-sheet">
+            <input type="text" placeholder="Name" name="Name">
+            <input type="text" placeholder="Email" name="Email">
+            <input type="number" placeholder="Mobile Number" name="Mobile">
+            <textarea  placeholder="Enter your message" name="Message"></textarea>
+            <input type="submit" value="Submit" id="submit" name="submit">
             
-            <button>Submit</button>
-
         </form>
 
     </div>
@@ -55,4 +55,16 @@
         Created by - Om Chaurasia
     </div>    
 </body>
+<script src="js/sweetalert.min.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwaf1KKQhE7dy9guCAiL-mSWM1nGGBT2vCvsp0eVFnvBryCM9OqqJIdLaaeP4ivxQ_e/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => swal("Submitted", "Thanks for Contacting Us", "success"))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </html>

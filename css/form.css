@@ -29,6 +29,22 @@
 
     background: transparent;
 }
+.form textarea{
+    width: 90%;
+    height: 35px;
+    margin: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #000;
+
+    background: transparent;
+}
+.form textarea::placeholder{
+    color: rgba(0,0,0,1);
+    font-weight: bold;
+}
 .form input:focus{
     border: 2px solid #000;
     background: rgba(167,167,243,0.1);
@@ -37,7 +53,7 @@
     color: rgba(0,0,0,1);
     font-weight: bold;
 }
-.form button{
+.form #submit{
     margin: 20px;
     height: 34px;
     width: 150px;
@@ -47,7 +63,7 @@
     border: none;
     border-radius: 10px;
 }
-.form button:hover{
+.form #submit:hover{
     background: skyblue;
     border: 2px solid rgba(0,0,0,0.8);
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
