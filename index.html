@@ -25,7 +25,10 @@
         </label>
         <h3>Om Chaurasia</h3>
         <form action="index.html">
-            <input type="text" name="search" id="search" required placeholder="Search blogs">
+            <input type="text" name="search" id="search" required placeholder="Search blogs" list="listblogs" onchange="get_option()" autocomplete="off">
+            <datalist id="listblogs" >
+               
+            </datalist>
             <input type="submit" value="Search" id="srh">
         </form>
         <div class="sidenav">
@@ -55,18 +58,18 @@
     </div>
 
     <div class="filter">Categories : <select name="categ" id="categ" onchange="GetSelectedTextValue(this)">
-        <option value="All">All</option>
-        <option value="IT Project" onclick="itpro()">IT Project</option>
-        <option value="Short Code">Short Code</option>
-        <option value="Other Educational">Other Educational</option>
-        <option value="Computer Hardware">Computer Hardware</option>
-        <option value="Stories">Stories</option>
-        <option value="Entertainment">Entertainment</option>
-    </select></div>
+            <option value="All">All</option>
+            <option value="IT Project" onclick="itpro()">IT Project</option>
+            <option value="Short Code">Short Code</option>
+            <option value="Other Educational">Other Educational</option>
+            <option value="Computer Hardware">Computer Hardware</option>
+            <option value="Stories">Stories</option>
+            <option value="Entertainment">Entertainment</option>
+        </select></div>
 
     <!-- cards cantainer code will be here -->
     <div class="container_fluid cards_container" id="blogs">
-        
+
 
     </div>
 
@@ -77,4 +80,5 @@
 </body>
 <script src="js/data.js"></script>
 <script src="js/index.js"></script>
+
 </html>

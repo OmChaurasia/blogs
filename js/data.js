@@ -3,25 +3,25 @@ data=[
         "title":"hello",
         "des":"first",
         "img": "this.jpg",
-        "file": "name.html",
+        "file": "about.html",
         "categ":"IT Project"
     },
     {
-        "title":"hello",
+        "title":"hllo",
         "des":"second",
         "img": "this.jpg",
         "file": "name.html",
         "categ":"Computer Hardware"
     },
     {
-        "title":"hello",
+        "title":"helo",
         "des":"third",
         "img": "this.jpg",
         "file": "name.html",
         "categ":"Stories"
     },
     {
-        "title":"hello",
+        "title":"ello",
         "des":"second",
         "img": "this.jpg",
         "file": "name.html",
@@ -29,14 +29,14 @@ data=[
     },
     
     {
-        "title":"hello",
+        "title":"helo",
         "des":"second",
         "img": "this.jpg",
         "file": "name.html",
         "categ":"Other Educational"
     },
     {
-        "title":"hello",
+        "title":"helo",
         "des":"second",
         "img": "this.jpg",
         "file": "name.html",

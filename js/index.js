@@ -22,7 +22,24 @@ function all() {
 
     
 }
-
+function get_option(){
+    let option= document.getElementById("search").value
+    for (i = 0; i < data.length; i++) {
+        if(data[i].title==option){
+            window.open(data[i].file)
+            // window.open(data[i].file,"_self")
+        }
+    }
+}
+function set_option(){
+    let html=""
+    for (i = 0; i < data.length; i++) {
+        html=`${html} <option value="${data[i].title}"></option>`
+    }
+    let datalist= document.getElementById("listblogs");
+    datalist.innerHTML=html
+}
+set_option()
 function GetSelectedTextValue(cate) {
     let option=cate.value
     let html = ""
