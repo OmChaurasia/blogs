@@ -65,3 +65,40 @@ function GetSelectedTextValue(cate) {
     
 }
 
+function searchdata(val){
+    val=val.toLowerCase()
+    // console.log(val)
+    let html=""
+    for (i = 0; i < data.length; i++) {
+        title=data[i].title.toLowerCase()
+        des=data[i].des.toLowerCase()
+        categ=data[i].categ.toLowerCase()
+        let str=`${title} ${des} ${categ}`
+        // console.log(str)
+        if(str.indexOf(val) > -1){
+            html=`${html} <div class="boxs box1"><div class="boximg"><img src="${data[i].img}" alt=""></div><div class="boxbottom"><p>${data[i].des}</p><a href=" ${data[i].file} "><button>View</button></a><div class="timestamp">${data[i].categ}</div></div></div>`;
+        
+        }
+
+
+    }
+    if(html==""){
+        console.log("No blogs related to val")
+        document.getElementById("blogs").innerHTML=`No blogs related to "${val}""`;
+    }else{
+
+        document.getElementById("blogs").innerHTML=html;
+    }
+}
+
+let geturl = window.location.search;
+
+if (geturl!=""){
+    geturl=geturl.slice(1);
+    geturl=geturl.replace(/=/g,`":"`)
+    geturl=geturl.replace(/&/g,`","`)
+    geturl=geturl.replace(/%20/g,` `)
+    geturl=`{"${geturl}"}`
+    geturl=JSON.parse(geturl)
+    searchdata(geturl.search)
+}
