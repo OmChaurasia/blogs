@@ -97,10 +97,15 @@ if (geturl!=""){
     document.getElementById("jumbo").style.display="None";
     document.getElementById("filter").style.display="None";
     geturl=geturl.slice(1);
+
     geturl=geturl.replace(/=/g,`":"`)
     geturl=geturl.replace(/&/g,`","`)
-    geturl=geturl.replace(/%20/g,` `)
+    geturl=geturl.replace("+"," ")
+    
+    
+    
     geturl=`{"${geturl}"}`
     geturl=JSON.parse(geturl)
+   
     searchdata(geturl.search)
 }
