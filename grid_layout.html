@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Om, Chaurasia, blog, tech, coding, programming, computer, github, entertainments, Hardware, projects, it, sector, display, grid, layout,blog">
+    <meta name="keywords"
+        content="Om, Chaurasia, blog, tech, coding, programming, computer, github, entertainments, Hardware, projects, it, sector, display, grid, layout,blog">
     <meta name="author" content="Om Chaurasia">
     <meta name="description" content="Grid Layout design with code. Explored CSS is display grid property in detail.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,41 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/grid_layout.css">
-    
+    <style>
+        .content h3 {
+            padding: 20px;
+            font-size: 35px;
+            border-bottom: 1px solid black;
+        }
+        .content .firstsection{
+            display: flex;
+            
+        }
+        .content .sbox{
+            width: 50%;
+            
+            box-sizing: border-box;
+            margin: 10px;
+        }
+        .sbox .para{
+            padding: 5px;
+        }
+        .sbox img{
+            height: 100%;
+            width: 100%;
+            border: 3px groove rgb(147, 147, 243);
+            border-radius: 5px;
+        }
+        
+        @media only screen and (max-width:650px) {
+            .content .firstsection{
+                display: block;
+            }
+            .content .sbox{
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -25,10 +60,10 @@
             <div class="thirdl"></div>
         </label>
         <div class="line">
-        <div id="logo">
-            <img src="img/logo.jpg">
-        </div>
-        <h3>Om Chaurasia</h3>
+            <div id="logo">
+                <img src="img/logo.jpg">
+            </div>
+            <h3>Om Chaurasia</h3>
         </div>
         <div class="sidenav">
             <ul class="navlist" id="navul">
@@ -43,7 +78,16 @@
 
     </div>
 
-
+    <!-- content will be here -->
+    <div class="content container">
+        <h3>Display Grid Layout Responsive Design CSS सीखे हिंदी में |</h3>
+        <div class="firstsection">
+            <div class="sbox"><img src="img/gridlayoutgif (2).gif" alt=""></div>
+            <div class="sbox para">क्या आप भी अपने website में  CSS grid layout को  लगाना चाहते हैं, तो आप बिल्कुल सही जगह पर है |  इस article को पूरा पढ़ने के बाद आप भी इस तरह के layout design कर सकते हैं, जैसा कि इस फोटो में दिखाया गया, वह भी पूरी तरह responsive design जो कि अलग-अलग devices me उस डिवाइस की height और width के according अपने आप को adjust कर लेता है | <br><br>
+                इसके लिए बस आपको दिए गए steps को follow करना होगा |  उससे related code भी होगा  जो आपके layout 	को बनाने में सहायता करेगा | तो चलिए अब steps को देखें |
+            </div>
+        </div>
+    </div>
     <!-- grid sytem code will be here -->
     <div class="gridmainbox">
         <div class="boxs box1">div1</div>
