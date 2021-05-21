@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/grid_layout.css">
+    <link rel="stylesheet" href="css/prism.css">
     <style>
         .content h3 {
             padding: 20px;
@@ -38,15 +39,47 @@
             border: 3px groove rgb(147, 147, 243);
             border-radius: 5px;
         }
+        .content .section2{
+            padding: 10px;
+        }
+        .content .section2 h5{
+            font-size: 25px;
+        }
+        .content .section2 p{
+            padding: 5px;
+        }
+        .content .main2{
+            display: flex;
         
+         
+        }
         @media only screen and (max-width:650px) {
             .content .firstsection{
                 display: block;
             }
             .content .sbox{
                 width: 100%;
+                box-sizing: border-box;
             }
         }
+        
+        @media only screen and (max-width:800px) {
+            .content .section2 .main2{
+                display: block;
+            }
+            .content .sbox{
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+    <style>
+        .copy-to-clipboard-button {
+            border: 2px solid #fff !important;
+            font-size: 1em !important;
+            color: #fff !important;
+        }
+        
     </style>
 </head>
 
@@ -87,6 +120,35 @@
                 इसके लिए बस आपको दिए गए steps को follow करना होगा |  उससे related code भी होगा  जो आपके layout 	को बनाने में सहायता करेगा | तो चलिए अब steps को देखें |
             </div>
         </div>
+        <div class="section2"><hr><br>
+            <h5>Step 1</h5><br>
+            <p>सबसे पहले आपको HTML file बना लेनी है, और body section में आ जाना है। </p>
+            <hr>
+        </div>
+        <div class="section2"><hr><br>
+            <h5>Step 2</h5><br>
+            <div class="main2">
+                <div class="sbox"><img src="img/gridlayoutgif.gif" alt=""></div>
+                <div class="sbox"><pre class="language-html"><code><xmp><div class="parent">
+    <div class="box1">div 1</div>
+    <div class="box2">div 2</div>
+    <div class="box3">div 3</div>
+    <div class="box4">div 4</div>
+    <div class="box5">div 5</div>
+    <div class="box6">div 6</div>
+    <div class="box7">div 7</div>
+</div></xmp></code></pre></div>
+                
+                
+            </div>
+            <div>
+                <br>
+            <p>ऊपर दिए हुए picture को देखकर आप parent और child का मतलब समझ सकते हैं। इस code को copy करके अपने body section में paste करें। इसमें child div है जो जिसमें box 1 box 2 box 3 class लगे हुए हैं | div का मतलब box होता है जो box ऊपर picture में देख सकते हैं वह यही box हैं।</p>
+        <br>
+        <p>मैंने parent div को parent class दिया है और child div को box 1, box 2, box 3, .... करके class दिया है।</p>
+        </div><br>
+            <hr>
+        </div>
     </div>
     <!-- grid sytem code will be here -->
     <div class="gridmainbox">
@@ -104,5 +166,6 @@
         Copyright &copy; 2020-2021 Created by - Om Chaurasia
     </div>
 </body>
+<script src="js/prism.js"></script>
 
 </html>
