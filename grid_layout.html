@@ -189,10 +189,33 @@
             <!-- i will be here -->
             <h5 style="padding: 10px;">Step 4</h5>
             <div class="firstsection">
-                <div class="sbox">hello</div>
-                <div class="sbox para">hello
-                </div>
-            </div>
+                <div class="sbox"><pre class="language-css"><code>.parent{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 10px;
+}</code></pre>
+<p>or</p>
+<pre class="language-css"><code>.parent{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(3,300px);
+    grid-gap: 10px;
+}</code></pre></div>
+                <div class="sbox para"><pre class="language-css"><code>.parent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,300px);
+    grid-gap: 10px;
+}</code></pre><img src="img/divcolor2.png" alt="" style="height: auto;">
+</div>
+</div>
+<p>grid-template-rows का प्रयोग कितना rows use करना है उसके लिए किया जाता है, तथा grid-template-columns का प्रयोग कितना columns use करना है उसके लिए किया जाता है। </p><br>
+<p>grid-template-columns में पहली div की width को लिखकर फिर space देते हैं फिर दूसरे column की width लिखते हैं फिर space देते हैं फिर तीसरे column की भी लिखते हैं,<br> और grid-template-rows में पहली div की height फिर space फिर दूसरे div की height space ऐसे करके हम लिखते रहते हैं।
+<br>जब same values पास करनी होती है तो हम लोग repeat का use कर लेते हैं। repeat function दो और arguments लेता है पहला कितने rows coloumn चाहिए दूसरा कितनी height या width चाहिए, 
+<br>
+<br>column के लिए height और row के लिए width होती है। <br>fr बचा हुआ complete width ले लेता है| repeat(3,1fr ) पर यह तीनों div को बराबर भागों में बांट कर पूरा width cover कर लेता है। as shown in picture <br><br>
+grid-gap  box के बीच में कितना gap चाहिए उसके लिए use होता है।</p>
         </div>
        
     </div>
