@@ -1,0 +1,17 @@
+{
+    "name":"OmChaurasia",
+    "short_name":"Om Chaurasia",
+    "background_color":"#fff",
+    "theme_color":"#36b6d8",
+    "start_url":"/",
+    "display":"standalone",
+    "icons":[
+
+        {
+            "src": "img/logo.jpg",
+            "sizes":"240x308",
+            "type":"image/jpg"
+        }
+
+        ]
+}
