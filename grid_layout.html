@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/grid_layout.css">
     <link rel="stylesheet" href="css/prism.css">
     <link rel="icon" href="img/logo.jpg" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
     <style>
         .content h3 {
             padding: 20px;
@@ -252,8 +253,22 @@ grid-row:2/4;</p></div>
     grid-gap: 10px;
     grid-auto-rows: 300px;
 }</code></pre></div>
-    <div class="sbox">hello</div>
+    <div class="sbox"></div>
+</div><hr>
+<h5>Step 6</h5>
+<div class="firstsection">
+    <div class="sbox"><img src="img/gridlayoutgif (2).gif" alt=""></div>
+    <div class="sbox para">
+        <pre class="language-css"><code>@media screen and (max-width: 992px) {
+    .box3 {
+      grid-column: 2/4;
+    }
+  }</code></pre>
+  <p>website को अलग-अलग devices में access करने के लिए उसके width के according उसको set करने के लिए media screen का use करते हैं इसे Responsive website भी कहते हैं जो ऊपर दिया गया कौन है|<br><br></p>
+    </div>
 </div>
+<p>इसमें website को उसके width के according कम से कम कितना width होना चाहिए उसको max width के अंदर लिखते हैं और उसके अंदर जिस box को जिस लाइन से जिस लाइन तक ले जाना रहता है उसको ले जाते हैं जैसे कि box3 को हम लाइन 2 से line 4 तक लाना चाहते हैं जो कि पहले line 2 से line 3 तक था उसे हम ऊपर दिए गए code की तरह लिख सकते हैं</p><br><br>
+आशा करता हूं आपको CSS grid समझ में आ गया होगा article को पूरा पढ़ने के लिए धन्यवाद |
         </div>
        
     </div>
