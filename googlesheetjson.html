@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Om, Chaurasia, blog, tech, coding, programming, computer, github, entertainments, Hardware, projects, it, sector", images ,blog>
+    <meta name="author" content="Om Chaurasia">
+    <meta name="description" content="Create JSON api from google spreadsheet || in hindi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create json api from excel spreadsheet </title>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards_container.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="icon" href="img/logo.jpg" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        .content h3 {
+            padding: 20px 0;
+            font-size: 35px;
+            border-bottom: 1px solid black;
+        }
+        .content p{
+            text-align: justify;
+            padding: 10px 0;
+        }
+        .content  h5{
+            padding: 10px 0;
+            font-size: 25px;
+        }
+        .content .imgdiv{
+            height: auto;
+            width: 100%;
+            
+        }
+        .content .imgdiv img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .copy-to-clipboard-button {
+            border: 2px solid #fff !important;
+            font-size: 1em !important;
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigation bar code will be here -->
+    <div class="navbar">
+        <input type="checkbox" id="toggle">
+        <label for="toggle" id="label">
+            <div class="firstl"></div>
+            <div class="secondl"></div>
+            <div class="thirdl"></div>
+        </label>
+        <div class="line">
+        <div id="logo">
+            <img src="img/logo.jpg">
+        </div>
+        <h3>Om Chaurasia</h3>
+        </div>
+        <div class="sidenav">
+            <ul class="navlist" id="navul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="policy.html">Policy</a></li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <!-- content will be here -->
+    <div class="content container">
+        <h3>Create JSON api from google spreadsheet || in hindi</h3>
+        <P>क्या आप भी किसी excel data को JSON api में convert करना चाहते हैं| जिससे आप किसी भी website से उस data को fetch कर सकें, वह भी live यानी जैसे-जैसे आप data में change करेंगे, excel data में जैसे-जैसे change होगा वैसे वैसे changes JSON api में भी होने लगेगा| क्या आप भी सीखना चाहते हैं, तो आप बिल्कुल सही जगह पर हैं| Steps काफी छोटे हैं| इसमें हम google spreadsheet का use करने वाले हैं| google spreadsheet बिल्कुल microsoft excel की तरह है|बस फर्क सिर्फ इतना है, microsoft excel offline है और google spreadsheet online है| जिसमें आप changes जैसे जैसे करेंगे वैसे वैसे वह JSON api में reflect होगा| बाद में आप इसे fetch api के द्वारा कहीं से भी fetch कर सकेंगे और अपने website में अपने अनुसार जिस अनुसार आप दिखाना चाहते हैं, दिखा सकेंगे और जब चाहे आप इसको google spreadsheet में changes करेंगे, वैसे ही सारे website में वह changes आ जाएंगे JSON api के द्वारा fetch api के द्वारा |</P>
+        <hr>
+        <h5>Step 1</h5>
+        <div class="imgdiv"><img src="img/cgs.gif" alt=""></div>
+        
+        <p>सबसे पहले आपको google drive खोल लेना है अपने computer में और उसमें google sheet बनाना है जैसा कि ऊपर animation में दिखाया गया है| इस google sheet में आप अपना पूरा data रख सकते हैं या फिर बाद में भी fill कर सकते हैं जब भी आपको change करना होगा आप यहीं से changes करेंगे|</p>
+        <hr>
+        <h5>Step 2</h5>
+        <div class="imgdiv"><img src="img/acse.gif" alt=""></div>
+        <p>अब आपको tools पर click करना है और script editor खोलना है वहां पर पुराने code को select करके delete कर देना है और नीचे दिए गए code को copy button पर click करके copy करके वहां पर ले जाकर paste कर देना है और save button पर click करके save कर देना है या फिर ctrl + s से save कर देना है</p>
+        <pre class="language-javascript"><code>function myFunction() {
+  var sheet= SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
+  var lastrow= sheet.getLastRow();
+  var lastcol= sheet.getLastColumn();
+  var data= sheet.getRange(1,1,lastrow,lastcol).getValues();
+  var jsdata= [];
+  
+  for(var i=1; i < lastrow ; i++){
+    var temp=0;
+    var dataarr="{";
+      for(var j=0;j < lastcol ; j++){
+        var str=`,"${data[0][j]}":"${data[i][j]}"`
+        if(temp==0){
+          str=str.slice(1)
+          temp++;
+        }
+        var dataarr=`${dataarr}${str}`
+      }
+    var dataarr=`${dataarr}}`
+    dataarr=JSON.parse(dataarr);
+    jsdata.push(dataarr)
+  }
+  return jsdata;  
+}
+function doGet(){
+  var response=myFunction();
+  return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
+}
+          
+          </code></pre>
+        <hr>
+        <h5>Step 3</h5>
+        <div class="imgdiv"><img src="img/deployapi.gif" alt=""></div>
+        <p>ऊपर दिए गए gif को ध्यान से देखें| इसमें api को deploy करने का पूरा process है| सबसे पहले आपको deploy button पर click कर देना है| उसके बाद आप description कुछ दे सकते हैं| उसके बाद आप access को anyone कर दीजिए फिर deploy कर दीजिए| फिर authorization कर दीजिए जिसमें वह permission मांगेगा| आपके spreadsheet को read and write करने की आप जिस भी email id से login है उस email id से authorize कर दीजिए| जैसा कि gif में दिखाया गया है फिर आपको link मिल जाएगा, यहां पर आपकी JSON api है अब आप अपने script editor को close कर सकते हैं और spreadsheet में जैसे-जैसे आप change करेंगे, JSON api में भी वैसे वैसे changes होते रहेंगे|</p>
+        <hr>
+        <h5>Step 4</h5>
+        <p>अब जब भी किसी website में इस data को fetch करना होगा तो हम नीचे दिए गए फिर fetch api code का use करके उसे fetch कर सकते हैं और जिस अनुसार हम दिखाना चाहते हैं| data को उस अनुसार दिखा सकते हैं चाहे वह html table के form में या अन्य किसी form में हम DOM(document object model) element का use करके change कर सकते हैं ध्यान रहे आप सब के अंदर अपना वह यूआरएल पास करें जो स्क्रिप्ट एडिटर पर रिप्लाई करने के बाद आपको मिला था नीचे दिए गए कोर्ट को आप अपने website में paste करके console में data को देख सकते हैं|</p>
+        <pre class="language-javascript"><code>fetch('https://script.google.com/macros/s/AKfycbz-oJtLVVp2IuNXaSJk0_de87x-aHE1BtdFL7qjh94_tb__m2MXMV5tZbuRvSqd2J6r/exec')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data)
+})
+.catch(() => {
+alert("something went wrong")
+});</code></pre>
+<p>Article को पूरा पढ़ने के लिए धन्यवाद|</p>
+    </div>
+
+
+
+
+
+
+
+    <!-- footer code will be here -->
+    <div class="footer">
+        Copyright &copy; 2020-2021 Created by - Om Chaurasia
+    </div>
+</body>
+<script src="js/prism.js"></script>
+</html>
