@@ -3,7 +3,7 @@ data=[
     {
         "title":"Create json api from excel spreadsheet",
         "des":"Create JSON api from google spreadsheet || in hindi",
-        "img": "this.jpg",
+        "img": "img/googletojson.svg",
         "file": "googlesheetjson.html",
         "categ":"Short Code"
     },
