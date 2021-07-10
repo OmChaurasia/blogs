@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords"
+        content="Om, Chaurasia, blog, tech, coding, programming, computer, github, entertainments, Hardware, projects, it, sector"
+        , images ,blog>
+    <meta name="author" content="SVG + CSS = ???">
+    <meta name="description" content="SVG + CSS = ??">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create json api from excel spreadsheet </title>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards_container.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="icon" href="img/logo.jpg" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        h1{
+            padding: 20px 0px;
+            font-size: 35px;
+            border-bottom: 1px solid black;
+        }
+        h3{
+            padding: 10px 0px;
+        }
+        p{
+            font-family: Arial,Verdana,Tahoma;
+        }
+        ul li{
+            font-family: Arial,Verdana,Tahoma;
+
+        }
+        svg:hover #box{
+            transform: translate(-10px,-10px) scale(1.2);
+            transition: all 0.7s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navigation bar code will be here -->
+    <div class="navbar">
+        <input type="checkbox" id="toggle">
+        <label for="toggle" id="label">
+            <div class="firstl"></div>
+            <div class="secondl"></div>
+            <div class="thirdl"></div>
+        </label>
+        <div class="line">
+            <div id="logo">
+                <img src="img/logo.jpg">
+            </div>
+            <h3>Om Chaurasia</h3>
+        </div>
+        <div class="sidenav">
+            <ul class="navlist" id="navul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="policy.html">Policy</a></li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <!-- content will be here -->
+  <div class="container" >
+      <h1>SVG + CSS = ????</h1>
+      <h3>What is SVG and difference between svg and png or jpg?</h3>
+      <p>Now ,First of all we talk about png of jpg. These types of images are pixel based. That's why for higher resolution image file should store large numbers of values of each pixels<br><br>
+        Then What's new in svg ?? This is vector based images. that's why we can code it manually. And image will also not blur on big screen devices. We can create css to a svg and give animation to a svg easily.
+
+        <h3>Let's talk about technic</h3>
+        <ul>
+            <li>Open your google drive in your computer and create a new google slide anywhere you want</li>
+            <li>Choose blank layout and start drawing you can add shape and color it and draw the shapes as you want in svg</li>
+            <li>after drawing is completed click file and download it in svg format</li>
+            <li>open the svg in vscode and for simplicity porpuse select language mode as html and right click and format document</li>
+            <li>now copy the svg formated code and paste it in your html document</li>
+            <li>now you can use inspect element and track each box which you want to style</li>
+            <li>you can remove the border path if not necessary</li>
+            <li>give id to the path you want to add css</li>
+            <li>Now you can animate it  or you can add link as a tag as you want</li>
+            <li>See the demo below</li>
+            <li>If you click on this arrow you will redirect to home page</li>
+            <li>That's all you are clicking on a specific page of an image and that specific part react as link </li>
+            <li>You can create any drawing I just created this for demo</li>
+            <li>Possibilities are endless. Must try this technic</li>
+            <div class="container">
+                <svg version="1.1" viewBox="0.0 0.0 960.0 540.0" fill="none" stroke="none" stroke-linecap="square"
+    stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="ge3f236afe3_0_0.0">
+        <path d="m0 0l960.0 0l0 540.0l-960.0 0l0 -540.0z" clip-rule="nonzero" />
+    </clipPath>
+    <g clip-path="url(#ge3f236afe3_0_0.0)">
+        <path fill="#ff00ff" d="m0 0l960.0 0l0 540.0l-960.0 0z" fill-rule="evenodd" />
+        <a href="index.html">
+        <path id="box" fill="#ffffff"
+            d="m348.24933 237.22572l32.787415 -32.7874l0 16.393692l121.95276 0l0 -16.393692l32.787415 32.7874l-32.787415 32.7874l0 -16.393707l-121.95276 0l0 16.393707z"
+            fill-rule="evenodd" /></a>
+        
+    </g>
+</svg>
+            </div>
+        </ul>
+    </p>
+  </div>
+
+
+
+
+
+
+
+    <!-- footer code will be here -->
+    <div class="footer">
+        Copyright &copy; 2020-2021 Created by - Om Chaurasia
+    </div>
+</body>
+<script src="js/prism.js"></script>
+
+</html>

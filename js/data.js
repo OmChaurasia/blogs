@@ -1,5 +1,11 @@
 data=[
-    
+    {
+        "title":"SVG + CSS = ??",
+        "des":"SVG + CSS = ??",
+        "img": "img/svgandcss.svg",
+        "file": "svgandcss.html",
+        "categ":"Stories"
+    },
     {
         "title":"Create json api from excel spreadsheet",
         "des":"Create JSON api from google spreadsheet || in hindi",
@@ -14,13 +20,7 @@ data=[
         "file": "grid_layout.html",
         "categ":"Short Code"
     },
-    {
-        "title":"helo",
-        "des":"third",
-        "img": "this.jpg",
-        "file": "name.html",
-        "categ":"Stories"
-    },
+    
     {
         "title":"ello",
         "des":"second",
