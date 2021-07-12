@@ -12,7 +12,7 @@ function all() {
         <p>
             ${data[i].des}
         </p>
-        <a href=" ${data[i].file} "><button>View</button></a>
+        <a href=" ${data[i].file} "><button>Read More</button></a>
         <div class="timestamp">
             ${data[i].categ}
         </div>
@@ -56,7 +56,7 @@ function GetSelectedTextValue(cate) {
     else{
         for (i = 0; i < data.length; i++) {
             if (data[i].categ==option){
-            html = `${html} <div class="boxs box1"><div class="boximg"><img src="${data[i].img}" alt="${data[i].title}"></div><div class="boxbottom"><p>${data[i].des}</p><a href=" ${data[i].file} "><button>View</button></a><div class="timestamp">${data[i].categ}</div></div></div>`;
+            html = `${html} <div class="boxs box1"><div class="boximg"><img src="${data[i].img}" alt="${data[i].title}"></div><div class="boxbottom"><p>${data[i].des}</p><a href=" ${data[i].file} "><button>Read More</button></a><div class="timestamp">${data[i].categ}</div></div></div>`;
             }
         }
         bloglist.innerHTML=html;
@@ -76,7 +76,7 @@ function searchdata(val){
         let str=`${title} ${des} ${categ}`
         // console.log(str)
         if(str.indexOf(val) > -1){
-            html=`${html} <div class="boxs box1"><div class="boximg"><img src="${data[i].img}" alt="${data[i].title}"></div><div class="boxbottom"><p>${data[i].des}</p><a href=" ${data[i].file} "><button>View</button></a><div class="timestamp">${data[i].categ}</div></div></div>`;
+            html=`${html} <div class="boxs box1"><div class="boximg"><img src="${data[i].img}" alt="${data[i].title}"></div><div class="boxbottom"><p>${data[i].des}</p><a href=" ${data[i].file} "><button>Read More</button></a><div class="timestamp">${data[i].categ}</div></div></div>`;
         
         }
 
