@@ -1,5 +1,12 @@
 data=[
     {
+        "title":"Free Online Resources for a programmer",
+        "des":"Free Online Resources for a programmer",
+        "img": "img/freeonlineresources.svg",
+        "file": "resourceforaprogrammer.html",
+        "categ":"Stories"
+    },
+    {
         "title":"SVG + CSS = ??",
         "des":"SVG + CSS = ??",
         "img": "img/svgandcss.svg",
@@ -21,13 +28,7 @@ data=[
         "categ":"Short Code"
     },
     
-    {
-        "title":"ello",
-        "des":"second",
-        "img": "this.jpg",
-        "file": "name.html",
-        "categ":"Short Code"
-    },
+    
     
     {
         "title":"helo",
