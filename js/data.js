@@ -30,18 +30,5 @@ data=[
     
     
     
-    {
-        "title":"helo",
-        "des":"second",
-        "img": "this.jpg",
-        "file": "name.html",
-        "categ":"Other Educational"
-    },
-    {
-        "title":"helo",
-        "des":"second",
-        "img": "this.jpg",
-        "file": "name.html",
-        "categ":"Entertainment"
-    },
+    
 ]
