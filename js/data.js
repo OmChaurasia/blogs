@@ -1,5 +1,12 @@
 data=[
     {
+        "title":"SQL CheatSheets",
+        "des":"SQL CheatSheet and crud operation",
+        "img": "img/sqlcheatsheet.svg",
+        "file": "sqlcheatsheet.html",
+        "categ":"Short Code"
+    },
+    {
         "title":"Free Online Resources for a programmer",
         "des":"Free Online Resources for a programmer",
         "img": "img/freeonlineresources.svg",

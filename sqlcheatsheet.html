@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords"
+        content="Om, Chaurasia, blog, tech, coding, programming, computer, github, entertainments, Hardware, projects, it, sector"
+        , images ,blog, free , resources, for , programmer>
+    <meta name="author" content="SVG + CSS = ???">
+    <meta name="description" content="SVG + CSS = ??">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Resources for a programmer</title>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards_container.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="icon" href="img/logo.jpg" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        h1 {
+            padding: 20px 0px;
+            font-size: 35px;
+            border-bottom: 1px solid black;
+        }
+
+        .container h3 {
+            padding: 10px 0px;
+            font-size: 30px;
+        }
+
+        .container p {
+            font-family: Arial, Verdana, Tahoma;
+        }
+
+        .container ul li {
+            font-family: Arial, Verdana, Tahoma;
+            padding: 5px 0px;
+        }
+        .container a{
+            font-family: Arial, Verdana, Tahoma;
+            color: blue;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        svg:hover #box {
+            transform: translate(-10px, -10px) scale(1.2);
+            transition: all 0.7s;
+        }
+        .copy-to-clipboard-button {
+            border: 2px solid #fff !important;
+            font-size: 1em !important;
+            color: #fff !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navigation bar code will be here -->
+    <div class="navbar">
+        <input type="checkbox" id="toggle">
+        <label for="toggle" id="label">
+            <div class="firstl"></div>
+            <div class="secondl"></div>
+            <div class="thirdl"></div>
+        </label>
+        <div class="line">
+            <div id="logo">
+                <img src="img/logo.jpg">
+            </div>
+            <h3>Om Chaurasia</h3>
+        </div>
+        <div class="sidenav">
+            <ul class="navlist" id="navul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="policy.html">Policy</a></li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <!-- content will be here -->
+    <div class="container">
+        <h1>SQL query cheatsheet in one page</h1>
+
+        <h3>To Create a database</h3>
+        <ul>
+            <li><pre class="language-sql"><code>CREATE DATABASE databasename;</code></pre></li>
+        </ul>
+        <h3>To Delete a database</h3>
+        <ul>
+            <li><pre class="language-sql"><code>DROP DATABASE databasename;</code></pre></li>
+        </ul>
+        <h3>To Work in a database</h3>
+        <ul>
+            <li><pre class="language-sql"><code>USE databasename;</code></pre></li>
+        </ul>
+        <h3>To Create table in a database</h3>
+        <ul>
+            <li><pre class="language-sql"><code>CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype(size),
+    column3 datatype(size)
+);</code></pre></li>
+        </ul>
+        <h3>To Delete a table</h3>
+        <ul>
+            <li><pre class="language-sql"><code>DROP TABLE tablename;</code></pre></li>
+        </ul>
+        <h3>To show schema(structure) of a table</h3>
+        <ul>
+            <li><pre class="language-sql"><code>DESC tablename;</code></pre></li>
+        </ul>
+        <h3>To Change name of a table</h3>
+        <ul>
+            <li><pre class="language-sql"><code>ALTER TABLE tablename 
+RENAME TO new_table_name;</code></pre></li>
+        </ul>
+        <h3>To Change name of a column</h3>
+        <ul>
+            <li><pre class="language-sql"><code>ALTER TABLE table_name
+RENAME COLUMN old_name TO new_name;</code></pre></li>
+        </ul>
+        <h3>To add new column at last</h3>
+        <ul>
+            <li><pre class="language-sql"><code>ALTER TABLE table_name
+ADD column_name datatype(size);</code></pre></li>
+        </ul>
+        <h3>To add new column at specific position</h3>
+        <ul>
+            <li><pre class="language-sql"><code>ALTER TABLE tablename 
+ADD new_column_name datatype(size) 
+AFTER column_name; </code></pre></li>
+        </ul>
+        
+        <h3>To Delete a column</h3>
+        <ul>
+            <li><pre class="language-sql"><code>ALTER TABLE table_name
+DROP COLUMN column_name;</code></pre></li>
+        </ul>
+        <h3>To modify datatype(size)/position of a column</h3>
+        <ul>
+            <li><pre class="language-sql"><code>ALTER TABLE tablename 
+MODIFY COLUMN column_name datatype(size) 
+AFTER column_name;</code></pre></li>
+        </ul>
+        <h3>To insert values in a table</h3>
+        <ul>
+            <b>To insert in a custom way</b>
+            <li><pre class="language-sql"><code>INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);</code></pre></li>
+<b>To insert in a squence</b>
+<li><pre class="language-sql"><code>INSERT INTO table_name
+VALUES (value1, value2, value3, ...);</code></pre></li>
+        </ul>
+        <h3>To update values in a table</h3>
+        <ul>
+            <li><pre class="language-sql"><code>UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;</code></pre></li>
+        </ul>
+        <h3>To read values in a table</h3>
+        <ul>
+            <li><pre class="language-sql"><code>SELECT column1, column2, ...
+FROM table_name
+WHERE condition;</code></pre></li>
+<li><pre class="language-sql"><code>SELECT * FROM table_name
+WHERE Country='Mexico';</code></pre></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- footer code will be here -->
+    <div class="footer">
+        Copyright &copy; 2020-2021 Created by - Om Chaurasia
+    </div>
+</body>
+<script src="js/prism.js"></script>
+
+</html>
