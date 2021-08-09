@@ -9,7 +9,7 @@
     <meta name="author" content="SVG + CSS = ???">
     <meta name="description" content="SVG + CSS = ??">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Online Resources for a programmer</title>
+    <title>SQL CheatSheet and crud operation</title>
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/cards_container.css">
@@ -31,6 +31,7 @@
 
         .container p {
             font-family: Arial, Verdana, Tahoma;
+            font-size: 25px;
         }
 
         .container ul li {
@@ -51,6 +52,27 @@
             border: 2px solid #fff !important;
             font-size: 1em !important;
             color: #fff !important;
+        }
+        ul table th{
+            background: rgba(34, 69, 92, 0.664);
+            margin: 0px  !important;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        ul table td{
+            margin: 0px  !important;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        ul table td:nth-child(1){
+            background: rgba(0, 0, 255, 0.596);
+        }
+        ul table td:nth-child(2){
+            background: rgba(178, 178, 211, 0.699);
         }
     </style>
 
@@ -171,6 +193,109 @@ FROM table_name
 WHERE condition;</code></pre></li>
 <li><pre class="language-sql"><code>SELECT * FROM table_name
 WHERE Country='Mexico';</code></pre></li>
+        </ul>
+        <h3>Conditional Operators for where clause</h3>
+        <ul>
+            <table style="border-collapse: collapse;">
+                <tbody><tr>
+                  <th>Operator</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>=</td>
+                  <td>Equal</td>
+                </tr>
+                <tr>
+                  <td>&gt;</td>
+                  <td>Greater than</td>
+                </tr>
+                <tr>
+                  <td>&lt;</td>
+                  <td>Less than</td>
+                </tr>
+                <tr>
+                  <td>&gt;=</td>
+                  <td>Greater than or equal</td>
+                </tr>
+                <tr>
+                  <td>&lt;=</td>
+                  <td>Less than or equal</td>
+                </tr>
+                <tr>
+                  <td>&lt;&gt;</td>
+                  <td>Not equal. <b>Note:</b> In some versions of SQL this operator may be written as !=</td>
+                </tr>
+                <tr>
+                  <td>BETWEEN</td>
+                  <td>Between a certain range</td>
+                </tr>
+                <tr>
+                  <td>LIKE</td>
+                  <td>Search for a pattern</td>
+                </tr>
+                <tr>
+                  <td>IN</td>
+                  <td>To specify multiple possible values for a column</td>
+                </tr>
+              </tbody></table>
+        </ul>
+        <h3>And OR and NOT Operators</h3>
+        <ul>
+            <li><pre class="language-sql"><code>SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 ...;</code></pre></li>
+
+<li><pre class="language-sql"><code>SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...;</code></pre></li>        
+
+<li><pre class="language-sql"><code>SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;</code></pre></li>        
+</ul>
+
+<h3>MIN() MAX() AVG() COUNT() and SUM()</h3>
+        <ul>
+            <li><pre class="language-sql"><code>SELECT MIN(column_name)
+FROM table_name
+WHERE condition; </code></pre></li>
+
+<li><pre class="language-sql"><code>SELECT MAX(column_name)
+FROM table_name
+WHERE condition; </code></pre></li>
+
+<li><pre class="language-sql"><code>SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;</code></pre></li>
+<li><pre class="language-sql"><code>SELECT AVG(column_name)
+FROM table_name
+WHERE condition;</code></pre></li>
+<li><pre class="language-sql"><code>SELECT SUM(column_name)
+FROM table_name
+WHERE condition;</code></pre></li>
+        </ul>
+
+        <h3>Order by (Ascending or Descending order)</h3>
+        <ul>
+            <li><pre class="language-sql"><code>SELECT * FROM Customers
+ORDER BY Country DESC;</code></pre></li>
+            <li><pre class="language-sql"><code>SELECT * FROM Customers
+ORDER BY Country;</code></pre></li>
+        </ul>
+        <h3>IN and BETWEEN</h3>
+        <ul>
+            <li><pre class="language-sql"><code>SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);</code></pre></li>
+            <li><pre class="language-sql"><code>SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);</code></pre></li>
+<li><pre class="language-sql"><code>SELECT column_name(s)
+FROM table_name
+WHERE column_name NOT IN (value1, value2, ...);</code></pre></li>
+<li><pre class="language-sql"><code>SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;</code></pre></li>
         </ul>
     </div>
 
