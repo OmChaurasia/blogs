@@ -12,7 +12,7 @@ function all() {
         <p>
             ${data[i].des}
         </p>
-        <a href=" ${data[i].file} "><button>Read More</button></a>
+        <a href=" ${data[i].file} "><button>Open</button></a>
         <div class="timestamp">
             ${data[i].categ}
         </div>

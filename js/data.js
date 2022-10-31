@@ -1,5 +1,12 @@
 data=[
     {
+        "title":"Video Calling website",
+        "des":"Video Calling website similar to Zoom",
+        "img": "img/videocallthumb.svg",
+        "file": "https://video-call-app-nodejs.om272301.repl.co/",
+        "categ":"IT Project"
+    },
+    {
         "title":"SQL CheatSheets",
         "des":"SQL CheatSheet and crud operation",
         "img": "img/sqlcheatsheet.svg",
